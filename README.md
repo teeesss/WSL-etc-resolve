@@ -17,9 +17,12 @@ Outputs a log file to /root/resolv.conf.log
 [boot]
 command = /bin/bash chmod +x /root/resolv.conf.sh; /bin/bash /root/resolv.conf.sh > /root/resolv.conf.log 2>&1
 systemd=true
+
+[network]
+generateResolvConf = false
 ```
 
-`vi /boot/resolv.conf.sh`
+`vi /root/resolv.conf.sh`
 
 ```
 #!/bin/bash
